@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 80px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+  .title {
+    margin-top: 30px;
+    font-size: 26px;
+  }
+}
+
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tabs-container button {
+  border: none;
+  color: #000000;
+  font-size: 14px;
+  /* font-family: "Roboto", sans-serif; */
+  cursor: pointer;
+  /* border-radius: 30px; */
+  background: #F2F2F2;
+  height: 40px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease-in-out;
+  border-radius: 5px;
+}
+
+.tabs-container button.active {
+  background: #000000;
+  color: white;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.products-container .product-card {
+  position: relative;
+}
+
+.products-container .product-card .product-badge { 
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  border-radius: 3px;
+  background: #ffffff;
+  color: #000000;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.products-container .product-card .product-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.products-container .product-card .product-info,
+.products-container .product-card .price-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.products-container .product-card .product-info .product-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.products-container .product-card .product-info .separator {
+  width: 5px;
+  height: 5px;
+  background: #000000;
+  border-radius: 50%;
+}
+
+
+.products-container .product-card .product-info .vendor {
+  font-size: 12px;
+  color: gray;
+}
+
+
+.products-container .product-card .price-container .compare-price {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.products-container .product-card .price-container .compare-at-price {
+  font-size: 12px;
+  text-decoration: line-through;
+  color: gray;
+}
+
+.products-container .product-card .price-container .discount {
+  font-size: 12px;
+  color: #FF0000;
+}
+
+.products-container .product-card .add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  border: none;
+  width: 100%;
+}
